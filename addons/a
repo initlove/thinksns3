@@ -1,0 +1,2 @@
+plugin/Login/lib/sina/saetv2.ex.class.php:	 * 获取当前登录用户所发出的评论列表
+theme/stv1/public_header.html:                                    <dd><a  href="{:U('public/Comment/index', array('type'=>'send'))}">发出的评论</a></dd>

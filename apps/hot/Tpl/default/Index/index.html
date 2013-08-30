@@ -1,0 +1,26 @@
+<include file="__THEME__/public_header" />
+<link rel="stylesheet" href="__APP__/event.css" type="text/css" media="screen" charset="utf-8" />
+
+<div id="page-wrap">
+  <div id="main-wrap">
+    <div class="boxShadow">
+      <div class="find-type">
+        <div class="app-title clearfix">
+          <h4 class="left"><img src="{$ts['app']['small_icon_url']}" />&nbsp;&nbsp;热点</h4>
+      </div>
+     </div>
+
+      <div id="col" class="clearfix">
+          <div id="col0", class="left">
+        	  {:W('UserList', array('cid'=>$cid,'uids'=>$topUser,'type'=>$type,'verify'=>$verify,'pid'=>$pid))}
+          </div>
+          <div id="col9", class="right">
+		    <!-- 画布 begin  -->
+		       	<include file="../Public/_eventList" />
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<include file="__THEME__/public_footer" />

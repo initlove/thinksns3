@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script src="__APP__/main.js"></script>
+<link id="channelCSS" href="__APP__/main.css" type="text/css" rel="StyleSheet">
+<div class="mod-user no-margin">
+
+<script type="text/javascript">
+function daily_index_slide_initCallback (carousel) {
+carousel.options.scroll = 3;
+jQuery('#IndexSlideNextBtn').bind('click', function() {
+carousel.next();
+return false;
+});
+jQuery('#IndexSlidePrevBtn').bind('click', function() {
+carousel.prev();
+return false;
+});
+;
+};
+</script>
+<div class="revamp13IndexHilite">
+<div class="left bg">
+<div class=" jcarousel-skin-ent"><div style="position: relative; display: block;" class="jcarousel-container jcarousel-container-horizontal"><div style="position: relative;" class="jcarousel-clip jcarousel-clip-horizontal">
+
+<!--UL START-->
+<ul style="overflow: hidden; position: relative; top: 0px; margin: 0px; padding: 0px; left: -2px; width: 24px;" id="IndexPhotoslide" class="jcarousel-list jcarousel-list-horizontal">
+ <volist name="data" id="vo">
+
+<li jcarouselindex="1" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-1 jcarousel-item-1-horizontal">
+<div class="left cat">
+<div class="left photo"><div class="photo_pic"><div style="width:215px;height:195px;overflow:hidden;position:relative;">
+<a href="{:U('event/Index/eventDetail', array('id'=>$vo['id'], 'uid'=>$vo['uid']))}">
+<img src="{$vo['cover']}" width="215" height="195"/>
+</a>
+</div></div>
+<div class="photo_text">
+<div class="catLabel">
+<div class="left label"><img src="__APP__/image/notice.gif"></div>
+</div>
+</div>
+<div class="content">
+<div class="text1"><a href="{:U('//eventDetail', array('id'=>$vo['id'], 'uid'=>$vo['uid']))}">{$vo['title']}</a> <span class="cGray2">[{$vo['type']}]</span></h3>
+<div class="text2"><span> 地点:  </span><a href="{:U('//eventDetail', array('id'=>$vo['id'], 'uid'=>$vo['uid']))}">{$vo['address']}</a></h3>
+</div>
+</div>
+</div>
+</li>
+</volist>
+
+</ul>
+<!--UL START-->
+
+</div>
+<div style="display: block;" class="jcarousel-prev jcarousel-prev-horizontal"></div>
+<div style="display: block;" class="jcarousel-next jcarousel-next-horizontal"></div>
+
+</div></div></div>
+<div class="arrowL"><img src="__APP__/image/prev.png" id="IndexSlidePrevBtn" class="cursorHand"></div>
+<div class="right arrowR"><img id="IndexSlideNextBtn" src="__APP__/image/next.png" class="cursorHand"></div>
+</div>
+<script type="text/javascript">
+jQuery('#IndexPhotoslide').jcarousel({
+initCallback: daily_index_slide_initCallback,
+animation: 1000,
+wrap: 'circular',
+scroll:3,
+auto:10
+});
+</script>
+</div>
